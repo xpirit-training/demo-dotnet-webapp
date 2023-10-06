@@ -1,5 +1,3 @@
-# FILEPATH: README.md
-
 # .NET MVC Web Application
 
 This repository contains a .NET MVC web application. The purpose of this application is to demonstrate the use of various GitHub features such as GitHub Flow, protected branches, CODEOWNERS, GitHub Actions, and many more.
