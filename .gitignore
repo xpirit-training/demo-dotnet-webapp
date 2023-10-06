@@ -1,0 +1,48 @@
+# Ignore .NET build output directories
+bin/
+obj/
+
+# Ignore NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+
+# Ignore Visual Studio files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Ignore ReSharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Ignore JetBrains Rider files
+.idea/
+
+# Ignore VSCode files
+.vscode/
+
+# Ignore logs
+*.log
+
+# Ignore the SQL Server files
+*.mdf
+*.ldf
+
+# Ignore the performance analysis files
+*.diagsession
+*.pssession
+
+# Ignore the build results
+**/bin/
+**/obj/
+
+# macOS generated files
+.DS_Store
+.AppleDouble
+.AppleDB
+.Trashes
+.Spotlight-V100
+.TemporaryItems
+.fseventsd
