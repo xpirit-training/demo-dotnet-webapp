@@ -4,6 +4,10 @@ on:
     pull_request:
         branches: [ main ]
 
+permissions:
+  checks: write
+  pull-requests: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,4 +29,11 @@ jobs:
       run: dotnet build --no-restore src/**
 
     - name: Test
-      run: dotnet test tests/*
+      run: dotnet test tests/* --logger trx
+
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        files: |
+          tests/**/TestResults/*.trx
