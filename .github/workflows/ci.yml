@@ -29,21 +29,11 @@ jobs:
       run: dotnet build --no-restore src/**
 
     - name: Test
-      run: dotnet test tests/*
+      run: dotnet test tests/* --logger trx
 
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v2
       if: always()
       with:
         files: |
-          **/TestResults/**/*.trx
           tests/**/TestResults/*.trx
-
-    - name: Publish Test Results
-      uses: EnricoMi/publish-unit-test-result-action/composite@v2
-      if: always()
-      with:
-        files: |
-          test-results/**/*.xml
-          test-results/**/*.trx
-          test-results/**/*.json
