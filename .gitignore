@@ -1,6 +1,7 @@
 # Ignore .NET build output directories
 bin/
 obj/
+TestResults/
 
 # Ignore NuGet Packages
 *.nupkg
